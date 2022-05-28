@@ -6,3 +6,18 @@
   padding: 20px;
   background-color: var(--primary-custom-green);
 }
+
+.main-background {
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background: url(../../../assets/images/idli-background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}

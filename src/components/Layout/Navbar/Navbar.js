@@ -1,16 +1,23 @@
 import React from 'react';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useHistory } from 'react-router-dom';
 
 import logo from '../../../assets/images/dosa.jpg';
 
 import './Navbar.css';
 
 const Navbar = () => {
+  const history = useHistory();
   const renderNavbar = () => (
     <nav className='navbar navbar-expand-lg navbar-light'>
       <div className='container'>
-        <img src={logo} alt='Site Logo' className='logo' />
+        <img
+          onClick={() => history.push('/')}
+          src={logo}
+          alt='Site Logo'
+          className='logo'
+        />
         <label style={{ fontSize: '14px', fontWeight: 'bold' }}>
           <span className='logo-label'>iC</span>
         </label>
@@ -22,6 +29,10 @@ const Navbar = () => {
           aria-controls='navbarSupportedContent'
           aria-expanded='false'
           aria-label='Toggle navigation'
+          style={{
+            background: 'var(--primary-green)',
+            color: 'var(--primary-white)',
+          }}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
